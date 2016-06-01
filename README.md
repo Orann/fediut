@@ -2,7 +2,7 @@
 
 ## Installation pour les développeurs :
 1. Cloner le repo.
-2. Télécharger le dossier contenant tous les fichiers qui sont dans le gitignore ici :
+2. Télécharger le dossier contenant tous les fichiers qui sont dans le gitignore ici : https://goo.gl/kYszv6
 3. Copier/Coller les fichiers index.php et .htaccess à la racine de votre dossier fraichement cloné.
 4. Copier/Coller le fichier config.php dans application/config/config.php.
 5. Copier/Coller le fichier email.php dans application/config/email.php.
