@@ -117,7 +117,7 @@ $autoload['config'] = array('form_validation');
 | "codeigniter_lang.php" would be referenced as array('codeigniter');
 |
 */
-$autoload['language'] = array('form_validation');
+$autoload['language'] = array();
 
 /*
 | -------------------------------------------------------------------
