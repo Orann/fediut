@@ -27,6 +27,7 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 *.sublime-project
 
 # Security Files
+index.php
 application/config/config.php
 application/config/email.php
 application/config/database.php
