@@ -57,7 +57,6 @@ class Api extends REST_Controller {
 
 	function salle_post()
 	{
-		print_r($this->post());
 		$result = $this->api_model->create_salle($this->post());
 
 		if($result === FALSE)
@@ -72,10 +71,17 @@ class Api extends REST_Controller {
 
 	}
 
-	function salle_put()
+	function salle_put($id='')
 	{
-		print_r($this->put());
-		$result = $this->api_model->create_salle($this->put());
+		if($this->get('id'))
+		{
+			$result = $this->api_model->update_salle($id, $this->put());
+
+		}
+		else{
+			$result = $this->api_model->create_salle($this->put());
+		}
+
 
 		if($result === FALSE)
 		{
@@ -87,5 +93,19 @@ class Api extends REST_Controller {
 			$this->response(array('status' => 'success'));
 		}
 
+	}
+
+	function salle_delete($id){
+		$result = $this->api_model->delete_salle($id);
+
+		if($result === FALSE)
+		{
+			$this->response(array('status' => 'failed'));
+		}
+
+		else
+		{
+			$this->response(array('status' => 'success'));
+		}
 	}
 }

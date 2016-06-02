@@ -22,4 +22,12 @@ class Api_model extends CI_Model {
     public function create_salle($data){
         $this->db->insert('Salle', $data);
     }
+
+    public function update_salle($id, $data){
+        $this->update('Salle', $data, array('id' => $id));
+    }
+
+    public function delete_salle($id){
+        $this->db->delete('Salle', array('id' => $id));
+    }
 }
