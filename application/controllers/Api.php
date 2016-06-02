@@ -36,7 +36,7 @@ class Api extends REST_Controller {
 
 		else
 		{
-			$this->response(NULL, 404);
+			$this->response(NULL, 204);
 		}
 	}
 
@@ -51,7 +51,7 @@ class Api extends REST_Controller {
 
 		else
 		{
-			$this->response(NULL, 404);
+			$this->response(NULL, 204);
 		}
 	}
 
@@ -71,9 +71,9 @@ class Api extends REST_Controller {
 
 	}
 
-	function salle_put($id='')
+	function salle_put($id = '')
 	{
-		if($this->get('id'))
+		if($id != '')
 		{
 			$result = $this->api_model->update_salle($id, $this->put());
 

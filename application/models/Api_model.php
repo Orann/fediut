@@ -24,7 +24,7 @@ class Api_model extends CI_Model {
     }
 
     public function update_salle($id, $data){
-        $this->update('Salle', $data, array('id' => $id));
+        $this->db->update('Salle', $data, array('id' => $id));
     }
 
     public function delete_salle($id){
